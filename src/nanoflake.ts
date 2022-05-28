@@ -1,7 +1,10 @@
 import { timestampValue } from './utils';
 
 export class Nanoflake {
-  constructor(private readonly epoch: number, private readonly value: bigint) {}
+  constructor(
+    public readonly epoch: number,
+    public readonly value: bigint,
+  ) {}
 
   public toString(): string {
     return this.value.toString();
